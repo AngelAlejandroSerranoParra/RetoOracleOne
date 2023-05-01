@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Encriptador y Desencriptador HTML</title>
+  <script>
+    function encriptarHTML() {
+      let mensaje = document.getElementById("texto-entrada").value;
+      let encriptado = mensaje
+        .replace(/e/g, "enter")
+        .replace(/i/g, "imes")
+        .replace(/a/g, "ai")
+        .replace(/o/g, "ober")
+        .replace(/u/g, "ufat");
+
+      document.getElementById("texto-salida").value = encriptado;
+    }
+
+    function desencriptarHTML() {
+      let mensajeEncriptado = document.getElementById("texto-entrada").value;
+      let desencriptado = mensajeEncriptado
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ai/g, "a")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
+
+      document.getElementById("texto-salida").value = desencriptado;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Encriptador y Desencriptador HTML</h1>
+  <p>Ingrese el texto que desea encriptar o desencriptar:</p>
+  <textarea id="texto-entrada"></textarea>
+  <br>
+  <button onclick="encriptarHTML()">Encriptar</button>
+  <button onclick="desencriptarHTML()">Desencriptar</button>
+  <br>
+  <p>Resultado:</p>
+  <textarea id="texto-salida"></textarea>
+</body>
+
+</html>

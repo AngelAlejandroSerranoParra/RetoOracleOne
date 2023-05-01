@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desencriptador</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Desencriptador</h1>
+	<label for="input">Texto Encriptado:</label>
+	<textarea id="input" cols="30" rows="10"></textarea><br>
+	<label for="output">Texto Desencriptado:</label>
+	<textarea id="output" cols="30" rows="10"></textarea><br>
+	<button onclick="desencriptar()">Desencriptar</button>
+
+	<script>
+		function desencriptar() {
+			const clave = {
+				'f': 'a',
+				'r': 'e',
+				'a': 'i',
+				's': 'a',
+				'e': 'p'
+			};
+			const input = document.getElementById('input').value.toLowerCase();
+			let output = '';
+			for (let i = 0; i < input.length; i++) {
+				const letra = input[i];
+				if (clave[letra]) {
+					output += clave[letra];
+				} else {
+					output += letra;
+				}
+			}
+			document.getElementById('output').value = output;
+		}
+	</script>
+</body>
+</html>
+
+
+
+if (inputTextArea.value.trim() !== '') {
+	outputTextArea.value = inputTextArea.value;
+}
+else{
+	outputTextArea.value="";
+
+}
+
+}
+
+
+
+
+image.addEventListener('click', () => {
+	image.style.display = 'none';
+	image2.style.display = 'none';
+	NM.style.display="none";
+	IET.style.display="none";
+	inputTextArea.focus();
+	
+
+});
+
+inputTextArea.addEventListener('click', () => {
+	image.style.display = 'none';
+	image2.style.display = 'none';
+	NM.style.display="none";
+	IET.style.display="none";
+	
+});
+
+inputTextArea.addEventListener('blur', () => {
+	if (inputTextArea.value.trim() === '') {
+		image.style.display = 'block';
+		image2.style.display = 'block';
+		NM.style.display="block";
+		IET.style.display="block";
+		outputTextArea.value = "";
+		
+	}
+});

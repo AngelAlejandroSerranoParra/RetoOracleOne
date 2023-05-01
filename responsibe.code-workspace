@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../responsibe"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Cs"
+		},
+		{
+			"path": "../Copia de seguridad/Reto Oracle"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Reto Oracle"
+	}
+}
