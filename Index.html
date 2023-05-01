@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desencriptador</title>
+<<<<<<< HEAD
 </head>
 
     
@@ -90,6 +91,70 @@
                 function encR() {
                 
                 let ecriptado = inputTextArea.value
+=======
+    <link rel="stylesheet" href="reset.css">  
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    
+    <body class="col-12 col-s-12">
+        <header class="col-12 col-s-12">
+            <img src="Imagenes/Logo.png">
+        </header>
+
+
+            <div class="col-2 col-s-2 ContIn ContInT">
+                <img src="Imagenes/Ingrese el texto aqui.png" class="ita col-18 col-s-13 itaT" id="itxa">
+                <textarea id="inputext" rows="4" cols="50" type="text" class="Input1 col-14 col-s-14 Input1T"></textarea>
+                <p id="resultado"></p>
+            </div>
+
+            <div class="Frame3 col-7 col-s-7 Frame3T">
+                <button id="DNR" onclick="encR()" class="buttonE col-15 col-s-15 buttonET"><h1 class="Frame3txt1">Encriptar</h1></button>
+                <button id="ENC" onclick="dsenC()" class="buttonD col-15 col-s-15 buttonDT"><h1 class="Frame3txt2">Desencriptar</h1></button>
+            </div>
+
+            <div class="contenedor3 col-6 col-s-6">
+                <div class="imgCont col-17 col-s-16" >
+                    <textarea readonly class="TextContOut col-2 col-s-2" id="outputext"></textarea>    
+                    <h1 id="TextTi" class="nmensaje col-2 col-s-5">Ningun Mensaje
+                            fue encontrado
+                    </h1>
+                    <h1  id="TextTi2" class="nmensaje2 col-2 col-s-5">
+                        Ingresa El texto que deseas encriptar
+                        o desencriptar.
+                    </h1>
+                <img src="Imagenes/Muñeco.png" class="Imuñeco col-2" id="Imuñecoo"> 
+
+                </div>
+                         
+            </div>
+
+
+ 
+            <script>
+                
+                const InText=document.getElementById("inputext")
+                const ImgTX=document.getElementById("itxa")
+                const outputTextArea = document.getElementById("outputext");
+                const image2 = document.getElementById("Imuñecoo");
+                const dsctr=document.getElementById("DNR")
+                const ECRTR=document.getElementById("ENC")
+                const NM=document.getElementById("TextTi")
+                const IET=document.getElementById("TextTi2")
+
+///Funciones y diccionario para se desencriptar y encriptar  el mensaje/////
+   
+                
+                
+              
+
+
+                function encR() {
+                
+                let ecriptado = InText.value
+>>>>>>> 01ba7194df8cdd592fcc63b7f329563d2f01a550
                     .replace(/e/g, "enter")
                     .replace(/i/g, "imes")
                     .replace(/a/g, "ai")
@@ -99,15 +164,21 @@
                 outputTextArea.value = ecriptado;
                 }
 
+<<<<<<< HEAD
                 function dsenC() {
                 
                 let dcriptado = inputTextArea.value
+=======
+                function dsenC(){
+                    let dcriptado=InText.value
+>>>>>>> 01ba7194df8cdd592fcc63b7f329563d2f01a550
                     .replace(/enter/g, "e")
                     .replace(/imes/g, "i")
                     .replace(/ai/g, "a")
                     .replace(/ober/g, "o")
                     .replace(/ufat/g, "u");
 
+<<<<<<< HEAD
                 outputTextArea.value = dcriptado;
                 }
 
@@ -140,11 +211,38 @@ dsctr.addEventListener('click', () => {
                     }
                     image.style.display = 'none';
                     image2.style.display = 'none';
+=======
+                    outputTextArea.value = dcriptado;
+                }
+
+                ////Desencriptador///////
+                ECRTR.addEventListener("click",()=>{
+                    let textareaValue=InText.value.trim
+                    if(textareaValue==""){
+                        return;
+                    }
+
+                    image2.style.display="none";
+                    NM.style.display="none";
+                    IET.style.display="none";
+
+                })
+                
+                ////Encriptador////
+                dsctr.addEventListener('click', () => {
+                    let textareaValue = InText.value.trim();
+                    if (textareaValue === "") {
+                        return;
+                    }
+                    
+                    image2.style.display = "none";
+>>>>>>> 01ba7194df8cdd592fcc63b7f329563d2f01a550
                     NM.style.display = "none";
                     IET.style.display = "none";
                     VBC.style.display = "block";
 
                 });
+<<<<<<< HEAD
                 
 
                
@@ -226,6 +324,62 @@ window.onresize = function() {
             };
 
 
+=======
+
+
+
+                ///Desaparecce imagen de itxa al dar click en imagen///
+                ImgTX.addEventListener("click",()=> {
+                    ImgTX.style.display = "none";
+                 
+                    InText.focus();
+                    
+
+                });
+
+                ///Desaparedce imagen al dar click en inputext//////
+                
+                InText.addEventListener('click', () => {
+                    ImgTX.style.display = 'none';
+                    
+                    
+                });
+
+                ///Para que si en caso de que se selecione el textarea input se pique fuera del text y aparezca de nuevo la imagen//
+                
+                InText.addEventListener("blur", () => {
+                    if (InText.value.trim() === "") {
+                        ImgTX.style.display = "block";
+                    
+                    }
+                    });
+
+                ///Se borrea el Output text Cuando el Intext Esta vacio en tiempo real//////
+                InText.addEventListener("input", () => {
+                    if (InText.value.trim() === "") {
+                        outputTextArea.value = "";
+                    }
+                    
+                    });  
+
+                ///Cuando se borre el contenido de Inputext reapareza contenido el rectangulo////
+                InText.addEventListener("input", () => {
+                    ImgTX.style.display = "none";
+                    
+                    if (InText.value.trim() === "") {
+                        outputTextArea.textContent = "";
+                        NM.style.display="block";
+                        IET.style.display="block";
+                        image2.style.display="block"
+                        VBC.style.display = "none";
+                    }
+                });
+
+         
+
+
+   
+>>>>>>> 01ba7194df8cdd592fcc63b7f329563d2f01a550
 
    
 
