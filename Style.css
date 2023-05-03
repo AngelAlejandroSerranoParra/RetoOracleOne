@@ -76,8 +76,9 @@
     .buttonE{
         
         height: 60px;
-         
-    
+        font-size: 8px;
+
+        color: #FFFFFF;
         background-color: #0A3871;
         border-radius: 24px;
     
@@ -90,7 +91,8 @@
     .buttonD{
        
         height: 60px;
-    
+        font-size: 8px;
+        color: #0A3871;
         background: #d8dfe8;
         border: 1px solid #0A3871;
         border-radius: 24px;
@@ -282,7 +284,7 @@
 
     .Input1T{
         position: relative;
-        height: 500px ;
+        height: 400px ;
         left: 150px;
         top: 68px;
         border: none; 
@@ -305,14 +307,14 @@
        
         left: 150px;
         
-        top: 630px;
+        top: 530px;
         
     
     }
     .buttonET{
         
         height: 60px;
-         
+        font-size: 6px;
         color: #F3F5FC;
         background-color: #0A3871;
         border-radius: 24px;
@@ -326,7 +328,7 @@
     .buttonDT{
        
         height: 60px;
-    
+        font-size: 6px;
         background: #F3F5FC;
         border: 1px solid #0A3871;
         border-radius: 24px;
@@ -343,7 +345,7 @@
     .imgContT{
         position:fixed;
         left:150px;
-        top:710px;
+        top:600px;
         height: 140px;
         
         
@@ -364,7 +366,7 @@
     .TextContOutT{
         position:fixed;
         left:170px;
-        top:715px;
+        top:615px;
         height: 80px;
 
         font-family: Arial, Helvetica, sans-serif;
@@ -387,8 +389,8 @@
 
     .nmensajeT{
         position: fixed;
-        left: 200px;
-        top: 700px;
+        left: 190px;
+        top: 600px;
         
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
@@ -413,7 +415,7 @@
     
         position: fixed;
         left: 190px;
-        top: 750px;
+        top: 650px;
         
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
@@ -499,7 +501,7 @@
         border: none; 
         margin: 0;
         padding: 0;
-        background-color:#222945; 
+        background-color:#F3F5FC; 
             padding: 5px;
             color: #0A3871;
             font-family: Arial, Helvetica, sans-serif;
@@ -523,9 +525,11 @@
     .buttonEC{
         
         height: 60px;
-         
+        font-size: 10px;
+
         color: #F3F5FC;
         background-color: #0A3871;
+        
         border-radius: 24px;
     
         flex: none;
@@ -537,7 +541,7 @@
     .buttonDC{
        
         height: 60px;
-    
+        font-size: 10px;
         background: #F3F5FC;
         border: 1px solid #0A3871;
         border-radius: 24px;
