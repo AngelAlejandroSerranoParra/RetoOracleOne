@@ -28,13 +28,13 @@
                 <button id="ENC" onclick="dsenC()" class="buttonD col-15 col-s-18 buttonDT buttonDC col-sc-5"><h1 class="Frame3txt2">Desencriptar</h1></button>
             </div>
 
-            <div class="contenedor3 col-6 col-s-7 col-sc-8">
+            <div class="contenedor3 col-6 col-s-7 col-sc-7">
                 <div class="imgCont col-17 col-s-19 imgContT col-sc-10 imgContC" id="ImgContl" >
                     <textarea readonly class="TextContOut col-2 col-s-18 col-sc-9 TextContOutT TextContOutC" id="outputext"></textarea>    
-                    <h1 id="TextTi" class="nmensaje col-2 col-s-5 nmensajeT nmensajeC ">Ningun Mensaje
+                    <h1 id="TextTi" class="nmensaje col-2 col-s-5 nmensajeT nmensajeC col-sc-8">Ningun Mensaje
                             fue encontrado
                     </h1>
-                    <h1  id="TextTi2" class="nmensaje2 col-2 col-s-5 nmensaje2T nmensaje2C">
+                    <h1  id="TextTi2" class="nmensaje2 col-2 col-s-5 nmensaje2T nmensaje2C col-sc-8">
                         Ingresa El texto que deseas encriptar
                         o desencriptaar.
                     </h1>
@@ -102,7 +102,7 @@
                     
 
                     // Actualizar el tamaño del div de salida en función de la altura del textarea de salida
-                    CiM.style.height = (outputTextArea.offsetHeight + 10) + 'px';
+                    CiM.style.height = (outputTextArea.offsetHeight + 50) + 'px';
 
                     // Actualizar la altura del textarea de salida en función de la altura del div de salida
                     outputTextArea.style.height = CiM.style.height;
@@ -115,7 +115,7 @@
                 InText.addEventListener("keyup", function() {
                     // Si el contenido del textarea de entrada está vacío, establecer la altura del div de salida y del textarea de salida en su valor inicial y borrar el contenido del textarea de salida
                     if (InText.value === "") {
-                    CiM.style.height = "auto";
+                    CiM.style.height = "90px";
                     outputTextArea.style.height = "auto";
                     outputTextArea.value = "";
                     }
@@ -150,7 +150,7 @@
                     
 
                     // Actualizar el tamaño del div de salida en función de la altura del textarea de salida
-                    CiM.style.height = (outputTextArea.offsetHeight + 10) + 'px';
+                    CiM.style.height = (outputTextArea.offsetHeight + 50) + 'px';
 
                     // Actualizar la altura del textarea de salida en función de la altura del div de salida
                     outputTextArea.style.height = CiM.style.height;
@@ -163,7 +163,7 @@
                 InText.addEventListener("keyup", function() {
                     // Si el contenido del textarea de entrada está vacío, establecer la altura del div de salida y del textarea de salida en su valor inicial y borrar el contenido del textarea de salida
                     if (InText.value === "") {
-                    CiM.style.height = "auto";
+                    CiM.style.height = "90px";
                     outputTextArea.style.height = "auto";
                     outputTextArea.value = "";
                     }
