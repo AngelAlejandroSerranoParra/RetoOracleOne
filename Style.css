@@ -436,7 +436,7 @@
     }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (-width: 550px) {
     .col-sc-1 {width: 8.33%;}
     .col-sc-2 {width: 16.66%;}
     .col-sc-3 {width: 25%;}
