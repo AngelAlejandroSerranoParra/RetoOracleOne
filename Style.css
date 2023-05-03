@@ -18,6 +18,7 @@
     .col-16{width: 2%;}
     .col-17{width: 20%;}
     .col-18{width: 110%;}
+    .col-19{width: 18%;}
 
 
     body{
@@ -228,6 +229,59 @@
         z-index: 3;
     }
     
+    .buttonC{
+        position: fixed;
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+
+        position: absolute;
+        
+        height: 40px;
+        left: 40px;
+        top: 580px;
+        background-color: #FFFFFF;
+
+        /* Dark blue/dark-blue-300 */
+
+        border: 1px solid #0A3871;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 24px;
+
+
+        }
+        .Hc{
+            position: fixed;
+            height: 19px;
+            top: 5px;
+            left: 5px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 19px;
+            text-align: center;
+    
+            /* Dark blue/dark-blue-300 */
+    
+            color: #0A3871;
+    
+    
+            /* Inside auto layout */
+    
+            flex: none;
+            order: 0;
+            flex-grow: 1;
+    
+        }
+
   }
 
 
@@ -439,6 +493,59 @@
     .ImuñecoT{
         display: none;
     }
+    .buttonCT{
+        position: fixed;
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+
+        position: absolute;
+        
+        height: 40px;
+        left: 1px;
+        top: 180px;
+        background-color: #FFFFFF;
+
+        /* Dark blue/dark-blue-300 */
+
+        border: 1px solid #0A3871;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 24px;
+
+
+        }
+
+    .HcT{
+            position: fixed;
+            height: 19px;
+            top: 5px;
+            left: 5px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 19px;
+            text-align: center;
+    
+            /* Dark blue/dark-blue-300 */
+    
+            color: #0A3871;
+    
+    
+            /* Inside auto layout */
+    
+            flex: none;
+            order: 0;
+            flex-grow: 1;
+    
+        }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 549px) {
@@ -525,7 +632,7 @@
     .buttonEC{
         
         height: 60px;
-        font-size: 10px;
+        font-size: 6px;
 
         color: #F3F5FC;
         background-color: #0A3871;
@@ -541,7 +648,7 @@
     .buttonDC{
        
         height: 60px;
-        font-size: 10px;
+        font-size: 6px;
         background: #F3F5FC;
         border: 1px solid #0A3871;
         border-radius: 24px;
@@ -652,5 +759,63 @@
     .ImuñecoC{
         display: none;
     }
+
+
+    .buttonCC{
+        position: fixed;
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+
+        position: absolute;
+        
+        height: 40px;
+        left: 20px;
+        top: 160px;
+        background-color: #FFFFFF;
+
+        /* Dark blue/dark-blue-300 */
+
+        border: 1px solid #0A3871;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 24px;
+
+        
+
+
+        }
+        .HcC{
+            position: fixed;
+            height: 19px;
+            top: 5px;
+            left: 5px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 19px;
+            text-align: center;
+    
+            /* Dark blue/dark-blue-300 */
+    
+            color: #0A3871;
+    
+    
+            /* Inside auto layout */
+    
+            flex: none;
+            order: 0;
+            flex-grow: 1;
+    
+        }
 }
+
+
 
