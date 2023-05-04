@@ -230,6 +230,8 @@
     }
     
     .buttonC{
+
+        
         position: fixed;
         box-sizing: border-box;
 
@@ -494,6 +496,10 @@
         display: none;
     }
     .buttonCT{
+
+
+        
+
         position: fixed;
         box-sizing: border-box;
 
@@ -762,6 +768,9 @@
 
 
     .buttonCC{
+
+        
+
         position: fixed;
         box-sizing: border-box;
 

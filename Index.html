@@ -39,7 +39,7 @@
                         o desencriptaar.
                     </h1>
                 <img src="Imagenes/Muñeco.png" class="Imuñeco col-2 ImuñecoT ImuñecoC" id="Imuñecoo"> 
-                <button class="buttonC buttonCT buttonCC col-9 col-s-12 col-sc-11"><h1 class="Hc HcT HcC col-12 col-s-12 col-sc-12">Copiar</h1></button> 
+                <button id="BTC" class="buttonC buttonCT buttonCC col-9 col-s-12 col-sc-11"><h1 class="Hc HcT HcC col-12 col-s-12 col-sc-12">Copiar</h1></button> 
             </div>
                          
             </div>
@@ -57,6 +57,7 @@
                 const NM=document.getElementById("TextTi")
                 const IET=document.getElementById("TextTi2")
                 const CiM=document.getElementById("ImgContl")
+                const BUTC=document.getElementById("BTC")
 
 ///Funciones y diccionario para se desencriptar y encriptar  el mensaje/////
    
@@ -88,6 +89,13 @@
                     outputTextArea.value = dcriptado;
                 }
 
+
+           
+            let BTCC = document.getElementById("BTC");
+                    BTCC.style.display = "none";
+            
+
+
                 ////Desencriptador 1090///////
             if (window.innerWidth <= 1099) {
                 ECRTR.addEventListener('click', function() {
@@ -110,6 +118,8 @@
                     image2.style.display = "none";
                     NM.style.display = "none";
                     IET.style.display = "none";
+                    let BTCC = document.getElementById("BTC");
+                    BTCC.style.display = "block";
 
                 });
 
@@ -133,7 +143,12 @@
                     image2.style.display = 'none';
                     NM.style.display = 'block';
                     IET.style.display = 'block';
+
+                    let BTCC = document.getElementById("BTC");
+                    BTCC.style.display = "none";
+                    
                     }
+                    
                 });
                 }
                 
@@ -159,6 +174,8 @@
                     image2.style.display = "none";
                     NM.style.display = "none";
                     IET.style.display = "none";
+                    let BTCC = document.getElementById("BTC");
+                    BTCC.style.display = "block";
                 });
 
                 InText.addEventListener("keyup", function() {
@@ -181,6 +198,9 @@
                     image2.style.display = 'none';
                     NM.style.display = 'block';
                     IET.style.display = 'block';
+
+                    let BTCC = document.getElementById("BTC");
+                    BTCC.style.display = "none";
                     }
                 });
                 }
@@ -192,13 +212,22 @@
                 ECRTR.addEventListener('click', () => {
                     let textareaValue = InText.value.trim();
                     if (textareaValue === "") {
+                        
                         return;
                     }
                     
                     image2.style.display = "none";
                     NM.style.display = "none";
                     IET.style.display = "none";
-                    VBC.style.display = "block";
+                    
+
+
+                    let BTCC = document.getElementById("BTC");
+                    BTCC.style.display = "block";
+
+                    
+                    
+
 
                 });
             }
@@ -215,7 +244,10 @@
                     image2.style.display = "none";
                     NM.style.display = "none";
                     IET.style.display = "none";
-                    VBC.style.display = "block";
+
+                    let BTCC = document.getElementById("BTC");
+                    BTCC.style.display = "block";
+                    
 
                 });
             }
@@ -258,9 +290,11 @@
                     });  
 
                 ///Cuando se borre el contenido de Inputext reapareza contenido el rectangulo////
+                
                 if (window.innerWidth <=1100){
                 InText.addEventListener("input", () => {
                     ImgTX.style.display = "none";
+                   
                     
                     if (InText.value.trim() === "") {
                         outputTextArea.textContent = "";
@@ -268,6 +302,11 @@
                         IET.style.display="block";
                         image2.style.display="none";
                         VBC.style.display = "none";
+
+                        let BTCC = document.getElementById("BTC");
+                        BTCC.style.display = "none";
+                    
+                        
                     }
                 });
             }
@@ -276,15 +315,45 @@
                 InText.addEventListener("input", () => {
                     ImgTX.style.display = "none";
                     
+                    
                     if (InText.value.trim() === "") {
                         outputTextArea.textContent = "";
                         NM.style.display="block";
                         IET.style.display="block";
                         image2.style.display="block"
-                        VBC.style.display = "none";
+
+                        let BTCC = document.getElementById("BTC");
+                        BTCC.style.display = "none";
+                        
+                  
                     }
                 });
             }
+            //////Boton de funcion para copiar////////
+            const CRB = document.getElementById("BTC");
+            const TXTOU = document.getElementById("outputext");
+
+                CRB.addEventListener("click", () => {
+                
+                const contenido = TXTOU.value;
+
+                
+                const tempEl = document.createElement('textarea');
+                tempEl.value = contenido;
+
+                
+                document.body.appendChild(tempEl);
+
+                
+                tempEl.select();
+
+                document.execCommand("copy");
+
+                document.body.removeChild(tempEl);
+
+                
+                });
+
 
          
 
