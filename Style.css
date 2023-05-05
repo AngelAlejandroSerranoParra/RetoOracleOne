@@ -283,6 +283,30 @@
             flex-grow: 1;
     
         }
+        .SMA{
+            height: 10px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            /* identical to box height, or 18px */
+
+
+            /* Gray/gray-400 */
+
+            color: #495057;
+
+            opacity: 0.8;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
 
   }
 
@@ -396,12 +420,13 @@
     }
     .contenedor3{
         position: fixed;
+       
     }
     
     .imgContT{
         position:fixed;
         left:150px;
-        top:600px;
+        top:650px;
         height: 140px;
         
         
@@ -422,7 +447,7 @@
     .TextContOutT{
         position:fixed;
         left:170px;
-        top:615px;
+        top:675px;
         height: 80px;
 
         font-family: Arial, Helvetica, sans-serif;
@@ -446,7 +471,7 @@
     .nmensajeT{
         position: fixed;
         left: 190px;
-        top: 600px;
+        top: 650px;
         
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
@@ -471,7 +496,7 @@
     
         position: fixed;
         left: 190px;
-        top: 650px;
+        top: 700px;
         
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
@@ -551,6 +576,31 @@
             order: 0;
             flex-grow: 1;
     
+        }
+
+        .SMAT{
+            height: 10px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            /* identical to box height, or 18px */
+
+
+            /* Gray/gray-400 */
+
+            color: #495057;
+
+            opacity: 0.8;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
         }
 }
 
@@ -671,14 +721,12 @@
     .imgContC{
         position:fixed;
         left:50px;
-        top:600px;
+        top:640px;
         height: 140px;
         
         
-        /* White */
         
         background: #FFFFFF;
-        /* shadow */
         
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
@@ -692,7 +740,7 @@
     .TextContOutC{
         position:fixed;
         left:70px;
-        top:601px;
+        top:660px;
         height: 80px;
 
         font-family: Arial, Helvetica, sans-serif;
@@ -700,10 +748,8 @@
         font-weight: 400;
         font-size: 24px;
         line-height: 150%;
-        /* or 36px */
 
 
-        /* Gray/gray-400 */
 
         color: #495057;
 
@@ -716,7 +762,7 @@
     .nmensajeC{
         position: fixed;
         left: 90px;
-        top: 600px;
+        top: 650px;
         
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
@@ -741,7 +787,7 @@
     
         position: fixed;
         left: 90px;
-        top: 650px;
+        top: 700px;
         
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
@@ -774,7 +820,6 @@
         position: fixed;
         box-sizing: border-box;
 
-        /* Auto layout */
 
         display: flex;
         flex-direction: row;
@@ -789,7 +834,6 @@
         top: 160px;
         background-color: #FFFFFF;
 
-        /* Dark blue/dark-blue-300 */
 
         border: 1px solid #0A3871;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -812,17 +856,36 @@
             line-height: 19px;
             text-align: center;
     
-            /* Dark blue/dark-blue-300 */
     
             color: #0A3871;
     
     
-            /* Inside auto layout */
     
             flex: none;
             order: 0;
             flex-grow: 1;
     
+        }
+        .SMAC{
+            height: 10px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+
+
+
+            color: #495057;
+
+            opacity: 0.8;
+
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
         }
 }
 

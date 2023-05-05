@@ -24,6 +24,7 @@
             </div>
 
             <div class="Frame3 col-7 col-s-7 Frame3T Frame3C col-sc-12">
+                <h2 class="col-5 SMA col-s-8 SMAT col-sc-8 SMAC">Solo letras Minusculas y sin acentos</h2>
                 <button id="DNR" onclick="encR()" class="buttonE col-15 col-s-18 buttonET buttonEC col-sc-5"><h1 class="Frame3txt1">Encriptar</h1></button>
                 <button id="ENC" onclick="dsenC()" class="buttonD col-15 col-s-18 buttonDT buttonDC col-sc-5"><h1 class="Frame3txt2">Desencriptar</h1></button>
             </div>
@@ -58,12 +59,28 @@
                 const IET=document.getElementById("TextTi2")
                 const CiM=document.getElementById("ImgContl")
                 const BUTC=document.getElementById("BTC")
+                
+                
+                
 
-///Funciones y diccionario para se desencriptar y encriptar  el mensaje/////
+
+
+               /////No ingresar Acentos y Mayusculas/////
+
+            InText.addEventListener("input", function() {
+                const texto = InText.value;
+                const textoModificado = texto.toLowerCase()
+                                                .normalize('NFD')
+                                                .replace(/[\u0300-\u036f]/g, '');
+                InText.value = textoModificado;
+                });
+
+
+
+                ///Funciones y diccionario para se desencriptar y encriptar  el mensaje/////
    
                 
-                
-              
+
 
 
                 function encR() {
@@ -128,9 +145,9 @@
                         outputTextArea.style.height="80px";
 
                         // Mostrar los elementos que deseas
-                        image2.style.display = 'block';
-                        NM.style.display = 'block';
-                        IET.style.display = 'block';
+                        image2.style.display = "block";
+                        NM.style.display = "block";
+                        IET.style.display = "block";
                         let BTCC = document.getElementById("BTC");
                         BTCC.style.display = "none";
                         }
@@ -140,19 +157,19 @@
                 
                 ////Encriptador 1099////
                 if (window.innerWidth <= 1099) {
-                dsctr.addEventListener('click', function() {
+                dsctr.addEventListener("click", function() {
                     let textareaValue=InText.value.trim
 
                     // Obtener el contenido del textarea de entrada
                     const contenido = InText.value;
 
                     // Verificar que el contenido del textarea de entrada no esté vacío antes de agregarlo al textarea de salida y actualizar el tamaño del div de salida y del textarea de salida
-                    if (contenido.trim() !== '') {
+                    if (contenido.trim() !== "") {
                     // Agregar el contenido al textarea de salida
                     
 
                     ///Actualizar los tamaños del espacio///
-                    CiM.style.height = (CiM.scrollHeight + 50) + 'px';
+                    CiM.style.height = (CiM.scrollHeight + 50) + "px";
                     outputTextArea.style.height=(outputTextArea.scrollHeight+40)+"px"
 
                     
@@ -176,9 +193,9 @@
                     
 
                     // Mostrar los elementos que deseas
-                    image2.style.display = 'none';
-                    NM.style.display = 'block';
-                    IET.style.display = 'block';
+                    image2.style.display = "none";
+                    NM.style.display = "block";
+                    IET.style.display = "block";
 
                     let BTCC = document.getElementById("BTC");
                     BTCC.style.display = "none";
@@ -216,7 +233,7 @@
 
             ////Encriptador/////
             if (window.innerWidth >=1100){
-                dsctr.addEventListener('click', () => {
+                dsctr.addEventListener("click", () => {
                     let textareaValue = InText.value.trim();
                     if (textareaValue === "") {
                         return;
@@ -247,8 +264,8 @@
 
                 ///Desaparedce imagen al dar click en inputext//////
                 
-                InText.addEventListener('click', () => {
-                    ImgTX.style.display = 'none';
+                InText.addEventListener("click", () => {
+                    ImgTX.style.display = "none";
                     
                     
                 });
@@ -319,7 +336,7 @@
                 const contenido = TXTOU.value;
 
                 
-                const tempEl = document.createElement('textarea');
+                const tempEl = document.createElement("textarea");
                 tempEl.value = contenido;
 
                 
