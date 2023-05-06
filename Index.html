@@ -115,93 +115,98 @@
 
                 ////Desencriptador 1090///////
                 if (window.innerWidth <= 1099) {
-                    ECRTR.addEventListener('click', function() {
-                        let textareaValue = InText.value.trim();
+                let bandera = false;
 
-                        // Obtener el contenido del textarea de entrada
-                        const contenido = InText.value;
-
-                        // Verificar que el contenido del textarea de entrada no esté vacío antes de agregarlo al textarea de salida y actualizar el tamaño del div de salida y del textarea de salida
-                        if (contenido.trim() !== '') {
-                        // Agregar el contenido al textarea de salida
-
-                        ///Actualizar los tamaños del espacio///
-                        CiM.style.height = (CiM.scrollHeight + 50) + 'px';
-                        outputTextArea.style.height=(outputTextArea.scrollHeight+40)+"px"                        
-
-                        // Mostrar los elementos que deseas
-                        image2.style.display = 'none';
-                        NM.style.display = 'none';
-                        IET.style.display = 'none';
-                        let BTCC = document.getElementById("BTC");
-                        BTCC.style.display = "block";
-                        }
-                    });
-
-                    InText.addEventListener("keyup", function() {
-                        // Si el contenido del textarea de entrada está vacío, establecer la altura del div de salida y del textarea de salida en su valor inicial y borrar el contenido del textarea de salida
-                        if (InText.value === "") {
-                        CiM.style.height="140px";
-                        outputTextArea.style.height="80px";
-
-                        // Mostrar los elementos que deseas
-                        image2.style.display = "block";
-                        NM.style.display = "block";
-                        IET.style.display = "block";
-                        let BTCC = document.getElementById("BTC");
-                        BTCC.style.display = "none";
-                        }
-                    });
-                    }
-
-                
-                ////Encriptador 1099////
-                if (window.innerWidth <= 1099) {
-                dsctr.addEventListener("click", function() {
-                    let textareaValue=InText.value.trim
-
+                ECRTR.addEventListener('click', function() {
+                    let textareaValue = InText.value.trim();
+                    
                     // Obtener el contenido del textarea de entrada
                     const contenido = InText.value;
 
                     // Verificar que el contenido del textarea de entrada no esté vacío antes de agregarlo al textarea de salida y actualizar el tamaño del div de salida y del textarea de salida
-                    if (contenido.trim() !== "") {
-                    // Agregar el contenido al textarea de salida
-                    
+                    if (contenido.trim() !== '') {
+                        // Agregar el contenido al textarea de salida
 
-                    ///Actualizar los tamaños del espacio///
-                    CiM.style.height = (CiM.scrollHeight + 50) + "px";
-                    outputTextArea.style.height=(outputTextArea.scrollHeight+40)+"px"
+                        // Actualizar los tamaños del espacio si la bandera es falsa
+                        if (!bandera) {
+                            CiM.style.height = (CiM.scrollHeight + 50) + 'px';
+                            outputTextArea.style.height = (outputTextArea.scrollHeight + 40) + 'px';
+                            bandera = true;
+                        }
 
-                    
-                outputTextArea.style.height = CiM.style.height;
-                    }
-                    image2.style.display = "none";
-                    NM.style.display = "none";
-                    IET.style.display = "none";
-                    let BTCC = document.getElementById("BTC");
-                    BTCC.style.display = "block";
-                });
-
-               
-
-                InText.addEventListener("keyup", function() {
-                    // Si el contenido del textarea de entrada está vacío, establecer la altura del div de salida y del textarea de salida en su valor inicial y borrar el contenido del textarea de salida
-                    if (InText.value === "") {
-                    CiM.style.height="140px";
-                    outputTextArea.style.height="80px";
-
-                    
-
-                    // Mostrar los elementos que deseas
-                    image2.style.display = "none";
-                    NM.style.display = "block";
-                    IET.style.display = "block";
-
-                    let BTCC = document.getElementById("BTC");
-                    BTCC.style.display = "none";
+                        // Mostrar los elementos que deseas
+                        image2.style.display = "none";
+                        NM.style.display = 'none';
+                        IET.style.display = 'none';
+                        let BTCC = document.getElementById('BTC');
+                        BTCC.style.display = 'block';
                     }
                 });
-                }
+
+                InText.addEventListener('keyup', function() {
+                    // Si el contenido del textarea de entrada está vacío, establecer la bandera en falsa y la altura del div de salida y del textarea de salida en su valor inicial, y borrar el contenido del textarea de salida
+                    if (InText.value === '') {
+                        bandera = false;
+                        CiM.style.height = '140px';
+                        outputTextArea.style.height = '80px';
+
+                        // Mostrar los elementos que deseas
+                        image2.style.display = "none";
+                        NM.style.display = 'block';
+                        IET.style.display = 'block';
+                        let BTCC = document.getElementById('BTC');
+                        BTCC.style.display = 'none';
+                    }
+                });
+            }
+
+                
+                ////Encriptador 1099////
+                if (window.innerWidth <= 1099) {
+                let bandera2 = false;
+
+                dsctr.addEventListener('click', function() {
+                    let textareaValue = InText.value.trim();
+                    
+                    // Obtener el contenido del textarea de entrada
+                    const contenido = InText.value;
+
+                    // Verificar que el contenido del textarea de entrada no esté vacío antes de agregarlo al textarea de salida y actualizar el tamaño del div de salida y del textarea de salida
+                    if (contenido.trim() !== '') {
+                        // Agregar el contenido al textarea de salida
+
+                        // Actualizar los tamaños del espacio si la bandera es falsa
+                        if (!bandera2) {
+                            CiM.style.height = (CiM.scrollHeight + 50) + 'px';
+                            outputTextArea.style.height = (outputTextArea.scrollHeight + 40) + 'px';
+                            bandera2 = true;
+                        }
+
+                        // Mostrar los elementos que deseas
+                        image2.style.display = "none";
+                        NM.style.display = 'none';
+                        IET.style.display = 'none';
+                        let BTCC = document.getElementById('BTC');
+                        BTCC.style.display = 'block';
+                    }
+                });
+
+                InText.addEventListener('keyup', function() {
+                    // Si el contenido del textarea de entrada está vacío, establecer la bandera en falsa y la altura del div de salida y del textarea de salida en su valor inicial, y borrar el contenido del textarea de salida
+                    if (InText.value === '') {
+                        bandera2 = false;
+                        CiM.style.height = '140px';
+                        outputTextArea.style.height = '80px';
+
+                        // Mostrar los elementos que deseas
+                        image2.style.display = "none";
+                        NM.style.display = 'block';
+                        IET.style.display = 'block';
+                        let BTCC = document.getElementById('BTC');
+                        BTCC.style.display = 'none';
+                    }
+                });
+            }
 
 
                 
