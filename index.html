@@ -34,10 +34,11 @@
     .col-19{width: 18%;}
 
 
-    body{
+    .bodyPc{
     
-        background: hsl(227, 60%, 97%);
-        overflow-y: scroll;
+        background:#F3F5FC;
+        position: fixed;
+        
     }
     
     header{
@@ -336,10 +337,12 @@
     .col-s-20{width: 14%;}
     
     
-    body{
-    
-        background: hsl(227, 60%, 97%);
-        overflow-y: scroll;        
+    .bodyT{
+        position: fixed;
+        background: #F3F5FC;
+        height: 980px;
+        overflow: a;
+               
     }
 
     header{
@@ -645,7 +648,7 @@
     body{
     
         background: hsl(227, 60%, 97%);
-        overflow-y: scroll;
+        
         
     }
 
@@ -916,10 +919,13 @@
 </head>
 
     
-    <body class="col-12 col-s-12">
+    <body class="col-12 col-s-12 bodyPc bodyT bodyC">
+    
+
+    
         <header class="col-12 col-s-8">
             <img src="Imagenes/Logo.png">
-            </div>
+            
 
         </header>
 
@@ -955,7 +961,9 @@
             </div>
                          
             </div>
-        </div>
+  
+
+    
 
  
             <script>
@@ -1103,7 +1111,7 @@
                         NM.style.display = "none";
                         IET.style.display = "none";
                         let BTCC = document.getElementById("BTC");
-                        BTCC.style.display = "none";
+                        BTCC.style.display = "block";
                     }
                 });
 
