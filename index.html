@@ -392,7 +392,7 @@
         position: relative;
         height: 300px ;
         left: 150px;
-        top: 68px;
+        top: 80px;
         border: none; 
         margin: 0;
         padding: 0;
@@ -402,7 +402,7 @@
             font-family: Arial, Helvetica, sans-serif;
             font-style: normal;
             font-weight: 400;
-            font-size: 32px;
+            font-size: 18px;
             line-height: 150%;
             resize: none;
             outline: none;
@@ -477,7 +477,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 12px;
         line-height: 150%;
 
 
@@ -680,7 +680,7 @@
 
     .Input1C{
         position: relative;
-        height: 400px ;
+        height: 300px ;
         left: 50px;
         top: 68px;
         border: none; 
@@ -692,7 +692,7 @@
             font-family: Arial, Helvetica, sans-serif;
             font-style: normal;
             font-weight: 400;
-            font-size: 32px;
+            font-size: 18px;
             line-height: 150%;
             resize: none;
             outline: none;
@@ -703,7 +703,7 @@
        
         left: 50px;
         
-        top: 530px;
+        top: 400px;
         
     
     }
@@ -743,7 +743,7 @@
     .imgContC{
         position:fixed;
         left:50px;
-        top:640px;
+        top:500px;
         height: 140px;
         
         
@@ -762,7 +762,7 @@
     .TextContOutC{
         position:fixed;
         left:70px;
-        top:660px;
+        top:510px;
         height: 80px;
 
         font-family: Arial, Helvetica, sans-serif;
@@ -784,7 +784,7 @@
     .nmensajeC{
         position: fixed;
         left: 90px;
-        top: 650px;
+        top: 510px;
         
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
@@ -809,7 +809,7 @@
     
         position: fixed;
         left: 90px;
-        top: 700px;
+        top: 560px;
         
         font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
@@ -853,7 +853,7 @@
         
         height: 40px;
         left: 20px;
-        top: 220px;
+        top: 180px;
         background-color: #FFFFFF;
 
 
@@ -932,7 +932,7 @@
         
             <div class="col-2 col-s-17 ContIn ContInT ContC col-sc-4">
                 <img src="Imagenes/Ingrese el texto aqui.png" class="ita col-18 col-s-13 itaT col-sc-20 itaC " id="itxa">
-                <textarea maxlength="200" id="inputext" rows="4" cols="50" type="text" class="Input1 col-14 col-s-14 Input1T Input1C col-sc-21"></textarea>
+                <textarea maxlength="140" id="inputext" rows="4" cols="50" type="text" class="Input1 col-14 col-s-14 Input1T Input1C col-sc-21"></textarea>
                 <p id="resultado"></p>
                 <img class="mnu" src="Imagenes/Menu.png" alt="">
                 <img class="mnu2" src="Imagenes/Menu (1).png" alt="">
@@ -1051,15 +1051,15 @@
 
                         // Actualizar los tamaños del espacio si la bandera es falsa
                         if (!bandera) {
-                            CiM.style.height = (CiM.scrollHeight + 70) + 'px';
-                            outputTextArea.style.height = (outputTextArea.scrollHeight + 40) + 'px';
+                            CiM.style.height = (CiM.scrollHeight + 40) + 'px';
+                            outputTextArea.style.height = (outputTextArea.scrollHeight + 70) + 'px';
                             bandera = true;
                         }
 
                         // Mostrar los elementos que deseas
                         image2.style.display = "none";
                         NM.style.display = "none";
-
+                        IET.style.display="none"
                         let NME=document.getElementById("TextTi")
                         NME.style.display = "none";
                         let BTCC = document.getElementById("BTC");
@@ -1102,8 +1102,8 @@
 
                         // Actualizar los tamaños del espacio si la bandera es falsa
                         if (!bandera2) {
-                            CiM.style.height = (CiM.scrollHeight + 70) + "px";
-                            outputTextArea.style.height = (outputTextArea.scrollHeight + 40) + 'px';
+                            CiM.style.height = (CiM.scrollHeight + 40) + 'px';
+                            outputTextArea.style.height = (outputTextArea.scrollHeight + 70) + 'px';
                             bandera2 = true;
                         }
 
